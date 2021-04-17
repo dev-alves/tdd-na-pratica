@@ -15,6 +15,6 @@ public class BookingModel {
     private String reserveName;
     private LocalDate checkIn;
     private LocalDate checkOut;
-    private int numberGuest;
+    private Integer numberGuest;
 
 }

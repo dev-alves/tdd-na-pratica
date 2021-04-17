@@ -4,6 +4,7 @@ import com.tdd.poc.tddnapratica.domain.model.BookingModel;
 import com.tdd.poc.tddnapratica.domain.repository.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Period;
 
@@ -13,6 +14,7 @@ public class BookingService {
     @Autowired
     BookingRepository bookingRepository;
 
+    @Transactional
     public int daysCalculatorWithDatabase(String name) {
         BookingModel bookingModel = bookingRepository
                 .findByReserveName(name)
